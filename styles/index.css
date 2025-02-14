@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #f7546f, #ff7eb3);
+}
+
+.envelope {
+    width: 50vmin;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+    transform: scale(1.05);
+}
+
+
+.confirmation {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.confirmation p {
+    font-size: 18px;
+    color: #d84a7a;
+}
+
+.letter {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+    max-width: 80%;
+}
+
+.letter p {
+    font-size: 18px;
+    color: #d84a7a;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #d84a7a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #ff5b7f;
+}
+
+.heart {
+    position: absolute;
+    font-size: 24px;
+    color: red;
+    animation: floatUp 2s linear forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
+}
